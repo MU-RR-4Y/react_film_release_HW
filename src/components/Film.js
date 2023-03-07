@@ -1,7 +1,11 @@
 import React from "react";
 
-const Film = ()=>{
-    return <p>im a film</p>
+const Film = ({name, url})=>{
+    return (
+    <>
+    <li><a href= {url} >{name}</a></li>
+    </>
+        )
 }
 
 

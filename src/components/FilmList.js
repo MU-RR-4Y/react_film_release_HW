@@ -1,14 +1,17 @@
 import React from "react";
 import Film from "./Film";
 
-const FilmList = ()=>{
-    return (
+const FilmList = ({films})=>{
+
+    const filmNodes = films.map(film=>{
+        return (
+            <Film key={film.id} name={film.name} url={film.url}/>
+        );
+        });
+
+    return(
         <>
-            <Film/>
-            <Film/>
-            <Film/>
-            <Film/>
-            <Film/>
+        <ul>{filmNodes}</ul>                  
         </>
     )
 }

@@ -35,17 +35,20 @@ const FilmReleaseBox = ()=>{
       ]
     );
 
+    const [url,setUrl] = useState('https://www.imdb.com/calendar/?region=gb')
+
 
 
 
 
 
     return (
-        <>
-        <h1>Films</h1>
+        <div className ='main-div'>
+        <h1>Upcoming Film Releases for UK</h1>
+        <hr/>
         <FilmList films ={films}/>
-        <UpcomingReleases/>
-        </>
+        <UpcomingReleases url ={url}/>
+        </div>
     );
 };
 
